@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{14345459-8AFF-402C-AAE3-31BC92758773}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Gestion_Hotel</RootNamespace>
+    <AssemblyName>Gestion_Hotel</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql, Version=5.0.7.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.5.0.7\lib\netstandard2.0\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.4.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.4.6.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.4.6.0\lib\net461\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Channels.4.7.0\lib\netstandard2.0\System.Threading.Channels.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.3\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConfirmDeleteRes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConfirmDeleteRes.Designer.cs">
+      <DependentUpon>ConfirmDeleteRes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="hotelscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hotelscs.Designer.cs">
+      <DependentUpon>hotelscs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Chambre.cs" />
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\hotel.cs" />
+    <Compile Include="Model\Reservation.cs" />
+    <Compile Include="myForm\addChambreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForm\addChambreForm.Designer.cs">
+      <DependentUpon>addChambreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForm\addHotelsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForm\addHotelsForm.Designer.cs">
+      <DependentUpon>addHotelsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForm\consommationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForm\consommationForm.Designer.cs">
+      <DependentUpon>consommationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myForm\modifieHotelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myForm\modifieHotelForm.Designer.cs">
+      <DependentUpon>modifieHotelForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReservationForm.Designer.cs">
+      <DependentUpon>ReservationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucHotel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucHotel.Designer.cs">
+      <DependentUpon>ucHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucHotelOne.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucHotelOne.Designer.cs">
+      <DependentUpon>ucHotelOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucHtelsAll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucHtelsAll.Designer.cs">
+      <DependentUpon>ucHtelsAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC\ucRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC\ucRoom.Designer.cs">
+      <DependentUpon>ucRoom.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ConfirmDeleteRes.resx">
+      <DependentUpon>ConfirmDeleteRes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hotelscs.resx">
+      <DependentUpon>hotelscs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForm\addChambreForm.resx">
+      <DependentUpon>addChambreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForm\addHotelsForm.resx">
+      <DependentUpon>addHotelsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForm\consommationForm.resx">
+      <DependentUpon>consommationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myForm\modifieHotelForm.resx">
+      <DependentUpon>modifieHotelForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReservationForm.resx">
+      <DependentUpon>ReservationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucHotel.resx">
+      <DependentUpon>ucHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucHotelOne.resx">
+      <DependentUpon>ucHotelOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucHtelsAll.resx">
+      <DependentUpon>ucHtelsAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC\ucRoom.resx">
+      <DependentUpon>ucRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\margherita.jpg" />
+    <None Include="Resources\pizza poulet2.png" />
+    <None Include="Resources\waterpng1.png" />
+    <None Include="Resources\wat1.png" />
+    <None Include="Resources\thon1.png" />
+    <None Include="Resources\Teas.png" />
+    <None Include="Resources\sugarcane.png" />
+    <None Include="Resources\schneck1.png" />
+    <None Include="Resources\Pizza végétarienne1.png" />
+    <None Include="Resources\pizza poulet1.png" />
+    <None Include="Resources\pizza margherita1.png" />
+    <None Include="Resources\pizza fruit.png" />
+    <None Include="Resources\piza thon.png" />
+    <None Include="Resources\orange.png" />
+    <None Include="Resources\NISWAZ.png" />
+    <None Include="Resources\marocain.png" />
+    <None Include="Resources\luxe.png" />
+    <None Include="Resources\homard.png" />
+    <None Include="Resources\hess.png" />
+    <None Include="Resources\helado.png" />
+    <None Include="Resources\Fruits.png" />
+    <None Include="Resources\waterpng.png" />
+    <None Include="Resources\wat.png" />
+    <None Include="Resources\thon.png" />
+    <None Include="Resources\schneck.png" />
+    <None Include="Resources\riz.png" />
+    <None Include="Resources\poulpes.png" />
+    <None Include="Resources\Pizza végétarienne.png" />
+    <None Include="Resources\pizza poulet.png" />
+    <None Include="Resources\pizza margherita.png" />
+    <None Include="Resources\Oranges_and_orange_juice.jpg" />
+    <None Include="Images\Capture-removebg-preview.png" />
+    <Content Include="Images\mywin.png" />
+    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\anas.png" />
+    <None Include="Resources\Crevettes.png" />
+    <None Include="Resources\dinde.png" />
+    <None Include="Resources\cola.PNG" />
+    <None Include="Resources\Colaa.png" />
+    <Content Include="Resources\door.png" />
+    <Content Include="Resources\door2.png" />
+    <Content Include="Resources\door3.png" />
+    <Content Include="Resources\door4.png" />
+    <None Include="Resources\MyDoor.png" />
+    <None Include="Resources\mywin.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
